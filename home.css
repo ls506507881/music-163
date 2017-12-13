@@ -1,1 +1,47 @@
-.topbar{background: #d43c33;}
+/* red: #d43c33 */
+
+.top{
+    background: #fff;
+}
+section.topbar{
+    background: #d43c33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: .52rem .2666rem; */
+    padding: 17px 10px;
+}
+section.topbar .topLogo>svg{
+    width: 142px;
+    height: 25px;
+    /* width: 3.7866rem;
+    height: 0.6666rem; */
+    vertical-align: top;
+}
+section.topbar>a{
+    /* font-size: .4rem; */
+    font-size: 15px;
+    color: #fff;
+    display: inline-block;
+    /* padding: .2rem .2666rem; */
+    /* border: 1px solid #fff; */
+    padding: 5px 11px;
+    line-height: 20px;
+    position: relative;
+}
+section.topbar>a::after{
+    content: "";
+    border: 1px solid #fff;
+    border-radius: 30px;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: scale(.5);
+}
+
+section.globalTabs{}
+section.playlists{}
+section.songs{}
+section.art{}
