@@ -3,7 +3,8 @@
 *::after{box-sizing: border-box;}
 *::before{box-sizing: border-box;}
 
-a{color: inherit; text-decoration: none;}
+/* a{color: inherit; } //颜色继承 */
+a,a:visited {color: #333;text-decoration: none;}
 i{font-style: normal;}
 ul,ol{list-style: none;}
 h1,h2,h3,h4,h5,h6{font-weight: normal;}

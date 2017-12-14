@@ -1,38 +1,43 @@
 /* red: #d43c33 */
 
+body{
+    font-size: .46785rem;
+    background: #FCFCFD;
+}
 .top{
     background: #fff;
 }
+/* topbar */
 section.topbar{
     background: #d43c33;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: .52rem .2666rem; */
-    padding: 17px 10px;
+    padding: .5312rem .3125rem;
 }
 section.topbar .topLogo>svg{
-    width: 142px;
-    height: 25px;
+    width: 4.437rem;
+    height: .7812rem;
     /* width: 3.7866rem;
     height: 0.6666rem; */
     vertical-align: top;
 }
 section.topbar>a{
     /* font-size: .4rem; */
-    font-size: 15px;
+    
     color: #fff;
     display: inline-block;
     /* padding: .2rem .2666rem; */
     /* border: 1px solid #fff; */
-    padding: 5px 11px;
-    line-height: 20px;
+    padding: .15625rem .34375rem;
+    line-height: .625rem;
     position: relative;
 }
 section.topbar>a::after{
     content: "";
     border: 1px solid #fff;
-    border-radius: 30px;
+    border-radius: 1.5625rem;
     position: absolute;
     top: -50%;
     left: -50%;
@@ -41,7 +46,88 @@ section.topbar>a::after{
     transform: scale(.5);
 }
 
-section.globalTabs{}
+/* 切换 */
+.tabs{
+    display: flex;
+    border-bottom: .5px solid #ccc;
+    font-size: 15px;
+}
+/* .tabs::after{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    transform: scale(.5);
+    border-bottom: 1px solid #ccc;
+    z-index: -1;
+} */
+.tabs > li{
+    width: 33.333333%;
+    font-size: .46877rem;
+    /* font-size: .46785rem; */
+    text-align: center;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs > li > .text{
+    padding: 10px 5px;
+    position: relative;
+    top: -0.5px;
+}
+.tabs > li.active{
+    /* border-bottom: 2px solid #d43c33; */
+    color: #d43c33;
+    /* position: relative; */
+}
+.tabs > li.active>.text{}
+.tabs > li.active>.text::after{
+    content: "";
+    border-bottom: 2px solid #d43c33;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+} 
+.tab-content > li{
+    display: none;
+}
+.tab-content > li.active{
+    display: block;
+}
+/* 推荐歌单 */
 section.playlists{}
+section.playlists>h2{
+    border-left: 2px solid #d43c33;
+    font-size: 17px;
+    line-height: 1;
+    padding-left: 8px;
+    margin:20px 0 8px;
+}
+
+section.playlists > ol.songs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+}
+section.playlists > ol.songs > li{
+    width: 32.8%;
+    margin: 8px 0;
+}
+section.playlists > ol.songs > li img{
+    width: 100%;
+}
+section.playlists > ol.songs > li p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding: 2px 6px 0;
+    line-height: 1.2;
+}
 section.songs{}
 section.art{}
