@@ -1,4 +1,5 @@
 /* red: #d43c33 */
+/* grey: #888 */
 
 body{
     font-size: .46785rem;
@@ -6,6 +7,15 @@ body{
 }
 .top{
     background: #fff;
+}
+/* 公共标题 */
+.section-title{
+    border-left: 2px solid #d43c33;
+    font-size: 17px;
+    line-height: 1;
+    padding-left: 8px;
+    margin:20px 0 8px;
+    color: #333333;
 }
 /* topbar */
 section.topbar{
@@ -98,21 +108,15 @@ section.topbar>a::after{
 .tab-content > li.active{
     display: block;
 }
+
 /* 推荐歌单 */
 section.playlists{}
-section.playlists>h2{
-    border-left: 2px solid #d43c33;
-    font-size: 17px;
-    line-height: 1;
-    padding-left: 8px;
-    margin:20px 0 8px;
-}
-
 section.playlists > ol.songs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     font-size: 13px;
+    margin-bottom: 36px;
 }
 section.playlists > ol.songs > li{
     width: 32.8%;
@@ -129,5 +133,68 @@ section.playlists > ol.songs > li p{
     padding: 2px 6px 0;
     line-height: 1.2;
 }
-section.songs{}
-section.art{}
+
+/* 最新音乐 */
+section.songs{
+
+}
+section.songs > .list {
+    margin-top: 18px;
+}
+section.songs > .list > li > h3{
+    font-size: 17px;
+    color: #333;
+}
+section.songs > .list > li > p{
+    font-size: 12px;
+    color: #888;
+}
+section.songs > .list >li{
+    position: relative;
+    margin-left: 10px;
+    border-bottom: .5px solid #E2E2E3;
+    padding-bottom: 7px;
+    padding-top: 8px;
+}
+section.songs > .list .play-button{
+    position: absolute; 
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.songs > .list .icon-play{
+    color: #aaa;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+section.songs > .list .icon-sq{
+    color: #FE672E;
+}
+/* footer */
+section.art{
+    padding-top: 43px;
+    padding-bottom: 18px;
+    background: transparent url(//oxkl41ihc.bkt.clouddn.com/recommand_bg_2x.png) no-repeat center;
+    text-align: center;
+    background-size: cover;
+}
+section.art > .logo > svg{
+    width: 230px;
+    height: 44px;
+}
+.link{
+    display: inline-block;
+    font-size: 16px;
+    color: #d33a31;
+    border: 1px solid #d33a31;
+    line-height: 38px;
+    padding: 0 18px;
+    border-radius: 36px;
+    margin: 10px 0 5px;
+}
+.copyright{
+    color: #888;
+    font-size: 12px;    
+    transform: scale(.75);
+}
