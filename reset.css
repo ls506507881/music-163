@@ -15,3 +15,13 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     fill: currentColor;
     overflow: hidden;
  }
+
+ /* 解决边距合并 */
+ .no-collapse::before{
+    content: "";
+    display: table;
+ }
+ .no-collapse::after{
+    content: "";
+    display: table;
+ }
