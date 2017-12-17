@@ -149,19 +149,32 @@ section.playlists > ol.songs > li p{
 }
 
 /* 最新音乐 */
-section.songs{
-
+#songs-loading{
+    margin: 0 auto;
+    width: 45px;
 }
+#songs-loading > div{
+    background: #D43C33;
+}
+
 section.songs > .list {
     margin-top: 18px;
 }
 section.songs > .list > li > h3{
     font-size: 17px;
     color: #333;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding-right: 40px;
 }
 section.songs > .list > li > p{
     font-size: 12px;
     color: #888;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding-right: 40px;
 }
 section.songs > .list >li{
     position: relative;

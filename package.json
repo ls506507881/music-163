@@ -9,6 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "leancloud-storage": "^3.4.2",
+    "loaders.css": "^0.1.2"
+  },
+  "devDependencies": {
+    "loaders.css": "^0.1.2"
   }
 }
