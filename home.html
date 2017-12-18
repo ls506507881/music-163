@@ -98,7 +98,10 @@
             </section>
         </li>
         <li class="page-2">page-2</li>
-        <li class="page-3">page-3</li>
+        <li class="page-3">
+            <input id="search" type="search" style="background:#EBECEC">
+            <ol id="searchResult"></ol>
+        </li>
     </ol>
     <script src="./vendors/jquery.min.js"></script>
     <script src="./vendors/av-min.js"></script>
@@ -142,7 +145,8 @@
         // let songs = [songObject,songObject2]
         // AV.Object.saveAll(songs)
 
-        let $newList = $('ol#newList')
+        var $newList = $('ol#newList')
+        var $searchResult = $('#searchResult')
         // 创建查询
         var query = new AV.Query('Song');
         // query.equalTo('hot', false);
@@ -173,11 +177,38 @@
                 $newList.append(li)
             }
         }, function (error) {
+            alert('获取歌曲失败')
         });
         // query.find().then(function (results) {
         //     console.log(results)
         // }, function (error) {
         // });
+
+        $('input#search').on('input',function(e){
+            let $input = $(e.currentTarget)
+            let value = $input.val().trim()
+            if(value ==""){return $searchResult.empty()}
+            var query1 = new AV.Query('Song');
+            var query2 = new AV.Query('Song');
+            query1.contains('name',value);
+            query2.contains('singer',value);
+            var queryAll = AV.Query.or(query1, query2);
+            queryAll.find().then(function(results){
+                $searchResult.empty()
+                if(results.length === 0){
+                    $searchResult.html('没有结果')
+                }else{
+                    for( var i = 0; i<results.length; i++){
+                    let song = results[i].attributes
+                    console.log(song)
+                    let li = `
+                         <li data-id="${song.objectId}"><a href="${song.url}">${song.name} - ${song.singer}</a></li>
+                    `
+                    $searchResult.append(li)
+                    }
+                }  
+            })
+        })
     </script>
 </body>
 </html>
