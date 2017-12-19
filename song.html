@@ -117,5 +117,57 @@
         <section class="lyric"></section>
         <section class="actions"></section>
     </div>
+    <script src="./vendors/jquery.min.js"></script>
+    <script src="./vendors/av-min.js"></script>
+    <script src="./scripts/av.js"></script>
+    <script>
+        function GetQueryString(name) {  
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+            var r = window.location.search.substr(1).match(reg);  //获取url中"?"符后的字符串并正则匹配
+            var context = "";  
+            if (r != null)  
+                context = r[2];  
+            reg = null;  
+            r = null;  
+            return context == null || context == "" || context == "undefined" ? "" : context;  
+        }
+        var id = GetQueryString("id");
+        var query = new AV.Query('Song');
+        query.get(id).then(function (song) {
+            // console.log(song)
+            let {url,lyric} = song.attributes
+            let video = document.createElement('video')
+            video.src = url;
+            video.play()
+            let array = []
+            var parts = lyric.split('\n')
+            parts.forEach(function(string,index){
+                let xxx = string.split(']')
+                xxx[0] = xxx[0].substr(1)
+                let regex = /(\d+):([\d.]+)/
+                let matches = xxx[0].match(regex)
+                let minute = +matches[1]
+                let seconds = +matches[2]
+
+                array.push({
+                    time: minute*60+seconds,
+                    lyric: xxx[1]
+                })
+            })
+            // console.log(array)
+            setInterval(function(){
+                // console.log(video.currentTime)
+                let current = video.currentTime
+                for(let i = 0;i<array.length; i++){
+                    if(i === array.length -1){
+                        console.log(array[i].lyric)
+                    }else if(array[i].time <= current && array[i+1].time > current){
+                        console.log(array[i].lyric)
+                        break;
+                    }
+                }
+            },500)
+        })
+    </script>
 </body>
 </html>
