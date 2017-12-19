@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -188,7 +188,7 @@
         $('input#search').on('input', function (e) {
                 if (timer) { window.clearTimeout(timer) }
                 timer = setTimeout(function () {
-                    console.log('时间到')
+                    // console.log('时间到')
                     let $input = $(e.currentTarget)
                     let value = $input.val().trim()
                     if (value == "") { return $searchResult.empty() }

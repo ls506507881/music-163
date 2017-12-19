@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./song.css">
+    <title>播放</title>
+    <style>
+        .page{
+            height: 100vh;
+            position: relative;
+        }
+        .page::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent url(//oxkl41ihc.bkt.clouddn.com/%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC%20%28Live%29.jpg) no-repeat center;
+            background-size: cover;
+            filter: blur(100px) brightness(.2);
+            z-index: -2;
+        }
+
+        section.pointer{
+            position: absolute;
+            top: 0;
+            left: 45%;
+            width: 84px;
+            height: 122px;
+            background: url(//oxkl41ihc.bkt.clouddn.com/needle.png) no-repeat center;
+            background-size: cover;
+            z-index: 6;
+        }
+        section.logo{
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            width: 100px;
+            height: 17px;
+            z-index: -1;
+            background: url(//oxkl41ihc.bkt.clouddn.com/song-logo.png) no-repeat center;
+            background-size: cover;
+        }
+        section.disk{
+            padding-top: 63px;           
+            /*  */
+        }
+        section.disk > .circle{
+            position: relative;
+            width: 248px;
+            height: 248px;
+            margin: 0 auto;
+        }
+        section.disk > .circle.playing{
+            animation: spin 10s linear infinite;
+        }
+        section.disk > .circle.playing.pause{
+            animation-play-state:paused;
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg)
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        section.disk > .circle > img{
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -80px;
+            border-radius: 50%;
+        }
+        section.disk > .circle::before{
+            content: '';
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(http://oxkl41ihc.bkt.clouddn.com/disc.png) no-repeat;
+            background-size: cover;
+        }
+        section.disk > .circle::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            background:transparent url(http://oxkl41ihc.bkt.clouddn.com/disc_light.png) no-repeat;
+            background-size: cover;
+        }
+        section.lyric{}
+        section.actions{}
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="pointer"></section>
+        <section class="logo"></section>
+        <section class="disk">
+            <div class="circle playing">
+                <img src="//oxkl41ihc.bkt.clouddn.com/%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC%20%28Live%29.jpg" alt="">
+            </div>
+        </section>
+        <section class="lyric"></section>
+        <section class="actions"></section>
+    </div>
+</body>
+</html>
