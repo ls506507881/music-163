@@ -160,7 +160,7 @@ section.playlists > ol.songs > li p{
 section.songs > .list {
     margin-top: 18px;
 }
-section.songs > .list > li > h3{
+section.songs > .list > li  h3{
     font-size: 17px;
     color: #333;
     overflow: hidden;
@@ -168,7 +168,7 @@ section.songs > .list > li > h3{
     white-space: nowrap;
     padding-right: 40px;
 }
-section.songs > .list > li > p{
+section.songs > .list > li  p{
     font-size: 12px;
     color: #888;
     overflow: hidden;
