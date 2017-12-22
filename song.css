@@ -19,7 +19,7 @@ section.pointer{
     left: 45%;
     width: 84px;
     height: 122px;
-    background: url(//oxkl41ihc.bkt.clouddn.com/needle.png) no-repeat center;
+    background: url(http://oxkl41ihc.bkt.clouddn.com/needle.png) no-repeat center;
     background-size: cover;
     z-index: 6;
 }
@@ -30,7 +30,7 @@ section.logo{
     width: 100px;
     height: 17px;
     z-index: -1;
-    background: url(//oxkl41ihc.bkt.clouddn.com/song-logo.png) no-repeat center;
+    background: url(http://oxkl41ihc.bkt.clouddn.com/song-logo.png) no-repeat center;
     background-size: cover;
 }
 section.disk{
