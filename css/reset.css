@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0;}
+*{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+
+a{color: inherit; text-decoration: none;}  /* 颜色继承 */
+/* a,a:visited {color: #333;} */
+i{font-style: normal;}
+ul,ol{list-style: none;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+ /* 解决边距合并 */
+ .no-collapse::before{
+    content: "";
+    display: table;
+ }
+ .no-collapse::after{
+    content: "";
+    display: table;
+ }
+
+ /* 公共歌单 */
+ .public-songlist li a{ position: relative; display: flex; }
+ .public-songlist li .number{ display: flex; align-items: center; justify-content: center; width: 40px; color: #999; font-family: Helvetica, sans-serif; font-size: 17px;}
+ .public-songlist li .song-info{ flex-grow: 1; padding-bottom: 8px; position: relative; }
+ .public-songlist li .song-info::after{ content: ""; border-bottom: 1px solid #E6E6E6; width: 200%; height: 100%; transform: scale(.5); position: absolute; transform-origin: top left; top: 50%; left: 0; box-sizing: border-box;}
+ .public-songlist li .song-info h3{ color: #333; font-size: 17px; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-top: 8px; padding-bottom: 1px; }
+ .public-songlist li .song-info p{ color: #888; font-size: 12px;}
+ .public-songlist li .play-button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%);}
+ .icon-play{ color: #aaa; width: 24px; height: 24px; vertical-align: middle; }

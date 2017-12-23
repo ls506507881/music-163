@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Document</title>
+    <style>
+        section.cover{ overflow: hidden; padding: 30px 10px 30px 15px; position: relative; display: flex;}
+        section.cover > .bg{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: red; z-index: -1; filter: blur(100px) brightness(.2);}
+        section.cover > .list-img{  background: blue; word-break: break-all;} 
+        section.cover > .list-img > img{ width: 114px; height: 114px; vertical-align: top;}
+        section.cover > .list-info{ flex-flow: 1; margin-left: 16px; padding-top: 1px; word-break: break-all;}
+        section.cover > .list-info h1{ font-size: 17px; line-height: 1.3; color: #fefefe; }
+        section.cover > .list-info > .user{ margin-top: 20px;}
+        section.cover > .list-info > .user a{ line-height: 30px; display: flex; color: #eee;font-size: 14px; font-weight: 400;}
+        section.cover > .list-info > .user img{ width: 30px; height: 30px; margin-right: 6px; border-radius: 50%;}
+
+        section.info{ margin: 10px 10px 0 15px; position: relative; padding-bottom: 6px;}
+        section.info h2{ font-size: 14px; color: #666; }
+        section.info h2 > i{ display: inline-block; position: relative; font-size: 12px; padding: 3px 8px; vertical-align: middle;  margin-right: 10px;}
+        section.info h2 > i::before{ content: ""; position: absolute;  border: 1px solid #DFDFDF; border-radius: 20px; top: -50%; left: -50%; width: 200%; height: 200%;  transform: 0 0; transform: scale(0.5,0.5);box-sizing: border-box;}
+        section.info .text{ font-size: 14px; color: #666; padding-top: 10px; line-height: 1.35; padding-bottom: 12px;}
+        section.info .text.fold{ height: 68px; overflow: hidden; display: -webkit-box;-webkit-box-orient: vertical; -webkit-line-clamp: 3;}
+        section.info .more{ position: absolute; right: 0; bottom: 0; width: 15px; height: 15px; text-align: center; }
+        section.info .more.fold{ transform: rotate(180deg);}
+        section.info .more svg{ width: 13px; height: 13px; }
+
+        section.song-list > h2{ line-height: 23px; background: #EEEFF0; font-size: 12px; padding: 0 10px; margin-top: 8px; color: #666666; }
+        
+        section.collect{ position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; background: #fff; padding: 8px 0; }
+        section.collect a{ display: inline-block; background: #D33A31; width: 88%; color: #fff; font-size: 17px; line-height: 38px; border-radius: 30px;}
+    </style>
+</head>
+<body style="background: #F8F8F8">
+    <section class="cover">
+        <img class="bg" src="//oxkl41ihc.bkt.clouddn.com/EG8yTL6bXoJZgKGZOwXPew%253D%253D%252F109951163015958414.jpg" alt="">
+        <div class="list-img">
+            <img src="//oxkl41ihc.bkt.clouddn.com/EG8yTL6bXoJZgKGZOwXPew%253D%253D%252F109951163015958414.jpg" alt="">
+        </div>
+        <div class="list-info">
+            <h1>胖友们，又到了屯脂肪的季节啦！</h1>
+            <div class="user">
+                <a href="#">
+                    <img src="//oxkl41ihc.bkt.clouddn.com/EG8yTL6bXoJZgKGZOwXPew%253D%253D%252F109951163015958414.jpg" alt="">
+                    查小
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <h2>标签：<i>华语</i><i>流行</i></h2>
+        <div class="text fold">
+            简介：说好的冬天减肥，可是天这么冷叫我怎么对自己狠下心啊，减不了不说，还会冻感冒，身体可是革命的本钱啊。
+            <br>
+            简介：说好的冬天减肥，可是天这么冷叫我怎么对自己狠下心啊，减不了不说，还会冻感冒，身体可是革命的本钱啊。
+            简介：说好的冬天减肥，可是天这么冷叫我怎么对自己狠下心啊，减不了不说，还会冻感冒，身体可是革命的本钱啊。
+        </div>
+        <span class="more">
+            <svg class="icon icon-down" aria-hidden="true">
+                <use xlink:href="#icon-down"></use>
+            </svg>
+        </span>
+    </section>
+    <section class="song-list">
+        <h2>歌曲列表</h2>
+        <ol class="public-songlist">
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="number">
+                        1
+                    </div>
+                    <div class="song-info">
+                        <h3>识食物者为俊杰</h3>
+                        <p>冯提莫 - 识食物者为俊杰</p>
+                    </div>
+                    <div class="play-button">
+                        <svg class="icon icon-play">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+        </ol>
+    </section>
+    <section class="collect">
+        <a href="#">收藏歌单</a>
+    </section>
+    <script src="//at.alicdn.com/t/font_434816_2feob8a2naw3tyb9.js"></script>
+</body>
+</html>

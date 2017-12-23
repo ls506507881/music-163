@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./song.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/song.css">
     <title>播放</title>
 </head>
 
 <body>
     <div class="page">
         <div class="bg">
-            <img src="http://oxkl41ihc.bkt.clouddn.com/%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC%20%28Live%29.jpg" alt="">
+            
         </div>
         <section class="pointer"></section>
         <section class="logo"></section>
@@ -27,11 +27,10 @@
                         <use xlink:href="#icon-pause"></use>
                     </svg>
                 </div>
-                <img src="http://oxkl41ihc.bkt.clouddn.com/%E7%90%86%E6%83%B3%E4%B8%89%E6%97%AC%20%28Live%29.jpg" alt="">
+                
             </div>
         </section>
         <section class="lyric-wrap">
-            <h1>歌名 - 歌手</h1>
             <div class="lyric">
                 <div class="lines"></div>
             </div>
@@ -57,10 +56,26 @@
             return context == null || context == "" || context == "undefined" ? "" : context;
         }
         var id = GetQueryString("id");
+        var $lyricWrap = $('.lyric-wrap')
+        var $circle = $('.circle')
+        var $bg = $('.bg')
         var query = new AV.Query('Song');
         query.get(id).then(function (song) {
             // console.log(song)
-            let { url, lyric } = song.attributes
+            let { url, lyric , name , singer , cover} = song.attributes
+
+            //在线获取歌曲名
+            let h1 = `<h1> ${name} - ${singer} </h1>`
+            $lyricWrap.prepend(h1)
+
+            //在线获取封面图片
+            let imgCover = `<img src="${cover}" alt="封面">`
+            $circle.append(imgCover)
+
+            // 在线获取背景图片
+            let imgBg = `<img src="${cover}" alt="封面">`
+            $bg.append(imgBg)
+
             let video = document.createElement('video')
             video.src = url;
             video.oncanplay = function () {
@@ -68,11 +83,11 @@
             }
             $('.icon-pause').on('click', function () {
                 video.pause()
-                $('.circle').addClass('pause')
+                $circle.addClass('pause')
             })
             $('.icon-play').on('click', function () {
                 video.play()
-                $('.circle').removeClass('pause')
+                $circle.removeClass('pause')
             })
 
             let array = []
@@ -90,6 +105,7 @@
                     lyric: xxx[1]
                 })
             })
+
             let $lyric = $('.lyric')
             array.map(function (object) {
                 let $p = $('<p/>')
