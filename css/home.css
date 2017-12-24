@@ -1,18 +1,8 @@
 /* red: #d43c33 */
 /* grey: #888 */
 
-body{
-    font-size: .46785rem;
-    background: #FCFCFD;
-}
-.top{
-    background: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 8;
-}
+body{ font-size: .46785rem; background: #FCFCFD;}
+.top{ background: #fff; position: fixed; width: 100%; top: 0; left: 0; z-index: 8;}
 /* 公共标题 */
 .section-title{
     border-left: 2px solid #d43c33;
@@ -231,7 +221,23 @@ section.art > .logo > svg{
 .page-2 .hotBanner img{width: 142px; height: 67px; z-index: 2;}
 .page-2 .hotBanner p{ font-size: 13px; color: #ECDBD7; margin-top: 8px;}
 .page-2 .list-more{ line-height: 55px; font-size: 14px; text-align: center; color: #999; }
-
 .page-2 #hot-song li:nth-child(1) .number{color: #df3436}
 .page-2 #hot-song li:nth-child(2) .number{color: #df3436}
 .page-2 #hot-song li:nth-child(3) .number{color: #df3436}
+
+.page-3{ background: #FBFCFD; }
+.page-3 .search{ padding:15px 10px; position: relative; }
+.page-3 .search input{ background: #EBECEC; width: 100%; border: none; border-radius: 30px; line-height: 30px; padding-left: 30px; outline: none; position: relative;}
+.page-3 .search label{ position: relative;}
+.page-3 .search label .icon-search { position: absolute; top: 4px; left: 10px; z-index: 2; color: #C9C9CA;}
+.page-3 .search input::-webkit-input-placeholder{ color: #C9C9C9; font-size: 14px;}
+.page-3 .hot-search{ padding: 12px 10px 0 10px; color: #666;}
+.page-3 .hot-search > h4{ font-size: 12px; padding-bottom: 10px;}
+.page-3 .hot-search .hot-block{ display: flex; flex-wrap: wrap;  }
+.page-3 .hot-search .hot-block li{ position: relative; padding: 0 14px; margin: 0 8px 8px 0; }
+.page-3 .hot-search .hot-block li a{ color: #333333; font-size: 14px; line-height: 32px; }
+.page-3 .hot-search .hot-block li::after{ content: ""; position: absolute;  top: 0; left: 0; width: 200%; height: 200%; transform:scale(.5);transform-origin: top left; border: 1px solid #E8E9EA; border-radius: 30px; }
+.page-3 .searchResult{ }
+.page-3 .searchResult li a{ display: flex; font-size: 15px; line-height: 45px;}
+.page-3 .searchResult li a .search-icon{ color: #B5B6B6; padding-left: 10px; height: 45px; display: flex; align-items: center; margin-right: 7px;}
+.page-3 .searchResult li a .search-info{  width: 40%; flex-grow: 1; position: relative;overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 15px; }

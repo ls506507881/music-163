@@ -25,6 +25,10 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     content: "";
     display: table;
  }
+ 
+/* 0.5px的下划线，需要给元素添加position: relative; */
+.underline::after{ content: ""; position: absolute; top: 50%; left: 0; width: 200%; height: 100%; transform:scale(.5);transform-origin: top left; border-bottom: 1px solid #E8E9EA; }
+
 
  /* 公共歌单 */
  .public-songlist li a{ position: relative; display: flex; }
