@@ -107,13 +107,20 @@ $('input#search').on('input', function (e) {
             queryAll.find().then(function (results) {
                 $searchResult.empty()
                 if (results.length === 0) {
-                    $searchResult.html('没有结果')
+                    $searchResult.html(`
+                    <li>
+                        <a href="#"> 
+                        <div class="search-icon">
+                            <svg class="icon icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+                        </div>
+                        <div class="search-info underline">没有结果</div></a>
+                    </li>`)
                 } else {
                     for (var i = 0; i < results.length; i++) {
                         let song = results[i].attributes
                         // console.log(song)
                         let li = `
-                        <li data-id="${results[i].id}">
+                        <li>
                             <a href="./song.html?id=${results[i].id}">
                             <div class="search-icon">
                                 <svg class="icon icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>

@@ -234,8 +234,8 @@ section.art > .logo > svg{
 .page-3 .hot-search{ padding: 12px 10px 0 10px; color: #666;}
 .page-3 .hot-search > h4{ font-size: 12px; padding-bottom: 10px;}
 .page-3 .hot-search .hot-block{ display: flex; flex-wrap: wrap;  }
-.page-3 .hot-search .hot-block li{ position: relative; padding: 0 14px; margin: 0 8px 8px 0; }
-.page-3 .hot-search .hot-block li a{ color: #333333; font-size: 14px; line-height: 32px; }
+.page-3 .hot-search .hot-block li{ position: relative;  margin: 0 8px 8px 0; }
+.page-3 .hot-search .hot-block li a{ color: #333333; padding: 0 14px; font-size: 14px; line-height: 32px; position: relative; z-index: 6; display: inline-block;}
 .page-3 .hot-search .hot-block li::after{ content: ""; position: absolute;  top: 0; left: 0; width: 200%; height: 200%; transform:scale(.5);transform-origin: top left; border: 1px solid #E8E9EA; border-radius: 30px; }
 .page-3 .searchResult{ }
 .page-3 .searchResult li a{ display: flex; font-size: 15px; line-height: 45px;}
