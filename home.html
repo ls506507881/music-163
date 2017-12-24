@@ -35,13 +35,6 @@
             </ol>
         </section>
     </div>
-    <style>
-        .hotBanner{ position: relative; display: flex; margin-top: -1px;  padding-left: 20px; flex-direction: column; padding-top: 15px; padding-bottom: 18px; }
-        .hotBanner::before{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url(http://oxkl41ihc.bkt.clouddn.com/hot_music_bg_2x.jpg) no-repeat center; background-size: cover; filter: brightness(.8);}
-        .hotBanner img{width: 142px; height: 67px; z-index: 2;}
-        .hotBanner p{ font-size: 13px; color: #ECDBD7; margin-top: 8px;}
-        .page-2 .list-more{ line-height: 55px; font-size: 14px; text-align: center; color: #999; }
-    </style>
     <ol class="tab-content no-collapse">
         <li class="page-1 active">
             <section class="playlists">
@@ -73,135 +66,8 @@
                 <img src="http://oxkl41ihc.bkt.clouddn.com/d6c04639gy1fkhm5abm5sj207v03pgll.jpg" alt="">
                 <p><small>更新日期：12月21日</small></p>
             </div>
-                <ol class="public-songlist">
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="number">
-                                1
-                            </div>
-                            <div class="song-info">
-                                <h3>识食物者为俊杰</h3>
-                                <p>冯提莫 - 识食物者为俊杰</p>
-                            </div>
-                            <div class="play-button">
-                                <svg class="icon icon-play">
-                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
+                <ol id="hot-song" class="public-songlist">
+                    <!-- 热门歌曲 -->
                 </ol>
                 <div class="list-more"><a href="#">查看完整榜单 &gt;</a></div>
         </li>
@@ -298,6 +164,7 @@
                 `
                 $newList.append(li)
             }
+            
         }, function (error) {
             alert('获取歌曲失败')
         });
@@ -340,6 +207,52 @@
                 }, 300)
 
             })
+
+            var $hotSong = $('#hot-song')
+            var $hotSongLi = $('#hot-song li')
+            var $number = $('#hot-song .number')
+            // 在线获取热歌榜
+            var hotQuery = new AV.Query('Song');
+            var cqh = 'select * from Song where hot = true';
+            AV.Query.doCloudQuery(cqh).then(function (data) {
+                let results = data.results;
+                for(var i = 0;i<results.length;i++){
+                    let song = results[i].attributes
+                    let li = `
+                        <li>
+                            <a href="./song.html?id=${results[i].id}">
+                                <div id="number" class="number">${song.number}</div>
+                                <div class="song-info">
+                                    <h3>${song.name}</h3>
+                                    <p>${song.singer} - ${song.album}</p>
+                                </div>
+                                <div class="play-button">
+                                    <svg class="icon icon-play">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    `
+                    $hotSong.append(li)
+                }
+                //添加排名数字（废弃），因为列表是在线获取的，html中没元素，索引获取不到
+                //想通过定时器延迟执行，未解决，存档等哪天想出解决的办法
+                // $hotSongLi.each(function(a,b){
+                //     if( a<=2 ){
+                //         $number[a].append('0'+(a+1))
+                //         $number.eq(a).addClass('hot-number')
+                //     }
+                //     else if( a>=2 && a<=8 ){
+                //         $number[a].append('0'+(a+1))
+                //     }else{
+                //         $number[a].append(a+1)
+                //     }
+                //     console.log($hotSong)
+                // })
+            })
+
+            
     </script>
 </body>
 </html>
