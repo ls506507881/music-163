@@ -3,60 +3,14 @@
 
 body{ font-size: .46785rem; background: #FCFCFD;}
 .top{ background: #fff; position: fixed; width: 100%; top: 0; left: 0; z-index: 8;}
-/* 公共标题 */
-.section-title{
-    border-left: 2px solid #d43c33;
-    font-size: .51325rem;
-    line-height: 1;
-    padding-left: .25rem;
-    margin:.625rem 0 .25rem;
-    color: #333333;
-}
 /* topbar */
-section.topbar{
-    background: #d43c33;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: .52rem .2666rem; */
-    padding: .5312rem .3125rem;
-}
-section.topbar .topLogo>svg{
-    width: 4.437rem;
-    height: .7812rem;
-    /* width: 3.7866rem;
-    height: 0.6666rem; */
-    vertical-align: top;
-}
-section.topbar>a{
-    /* font-size: .4rem; */
-    
-    color: #fff;
-    display: inline-block;
-    /* padding: .2rem .2666rem; */
-    /* border: 1px solid #fff; */
-    padding: .15625rem .34375rem;
-    line-height: .625rem;
-    position: relative;
-}
-section.topbar>a::after{
-    content: "";
-    border: 1px solid #fff;
-    border-radius: 1.5625rem;
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    transform: scale(.5);
-}
+section.topbar{ background: #d43c33; display: flex; justify-content: space-between; align-items: center; /* padding: .52rem .2666rem; */padding: .5312rem .3125rem;}
+section.topbar .topLogo>svg{width: 4.437rem; height: .7812rem; /* width: 3.7866rem; height: 0.6666rem; */ vertical-align: top;}
+section.topbar>a{ /* font-size: .4rem; */ color: #fff; display: inline-block; /* padding: .2rem .2666rem; *//* border: .03125rem solid #fff; */padding: .15625rem .34375rem; line-height: .625rem; position: relative;}
+section.topbar>a::after{ content: ""; border: .03125rem solid #fff; border-radius: 1.5625rem; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; transform: scale(.5);}
 
 /* 切换 */
-.tabs{
-    display: flex;
-    border-bottom: .5px solid #ccc;
-    font-size: 15px;
-}
+.tabs{display: flex; border-bottom: .015625rem solid #ccc; font-size: .46875rem; }
 /* .tabs::after{
     content: "";
     position: absolute;
@@ -65,99 +19,68 @@ section.topbar>a::after{
     top: -50%;
     left: -50%;
     transform: scale(.5);
-    border-bottom: 1px solid #ccc;
+    border-bottom: .03125rem solid #ccc;
     z-index: -1;
 } */
-.tabs > li{
-    width: 33.333333%;
-    font-size: .46877rem;
-    /* font-size: .46785rem; */
-    text-align: center;
-    line-height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tabs > li > .text{
-    padding: 10px 5px;
-    position: relative;
-    top: -0.5px;
-}
-.tabs > li.active{
-    /* border-bottom: 2px solid #d43c33; */
-    color: #d43c33;
-    /* position: relative; */
-}
-.tabs > li.active>.text{}
-.tabs > li.active>.text::after{
-    content: "";
-    border-bottom: 2px solid #d43c33;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-} 
-.tab-content{
-    margin-top: 105px;
-}
-.tab-content > li{
-    display: none;
-}
-.tab-content > li.active{
-    display: block;
-}
+.tabs > li{ width: 33.333333%; font-size: .46877rem; text-align: center; line-height: .625rem; display: flex; justify-content: center; align-items: center;}
+.tabs > li > .text{ padding: .3125rem .15625rem; position: relative; top: -0.015620.15625rem;}
+.tabs > li.active{/* border-bottom: 2px solid #d43c33; */  color: #d43c33;  /* position: relative; */}
+.tabs > li.active>.text::after{content: ""; border-bottom: .0625rem solid #d43c33; position: absolute; bottom: -.03125rem; left: 0; width: 100%;} 
+.tab-content{ margin-top: 3.28125rem; }
+.tab-content > li{ display: none;}
+.tab-content > li.active{ display: block; }
 
 /* 推荐歌单 */
 /* section.playlists::before{
     content: "";
     display: table;
     /* display: block;
-    border-top: 1px solid transparent; */
+    border-top: .03125rem solid transparent; */
  /*} */
-.page-1 section.playlists > ol.songs{ display: flex; flex-wrap: wrap;  justify-content: space-between; font-size: 13px; margin-bottom: 36px; } 
-.page-1 section.playlists > ol.songs > li{ width: 32.8%; margin: 8px 0; }
+.page-1 section.playlists > ol.songs{ display: flex; flex-wrap: wrap;  justify-content: space-between; font-size: .40625rem; margin-bottom: 1.125rem; } 
+.page-1 section.playlists > ol.songs > li{ width: 32.8%; margin: .25rem 0; }
 .page-1 section.playlists > ol.songs > li img{ width: 100%; height: 3.28rem; }
-.page-1 section.playlists > ol.songs > li p{ display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; padding: 2px 6px 0; line-height: 1.2; }
+.page-1 section.playlists > ol.songs > li p{ display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; padding: .0625rem .1875rem 0; line-height: 1.2; }
 
 /* 最新音乐 */
-.page-1 #songs-loading{ margin: 0 auto; width: 45px; }
+.page-1 #songs-loading{ margin: 0 auto; width: 1.40625rem; }
 .page-1 #songs-loading > div{ background: #D43C33; }
 
-.page-1 section.songs > .list { margin-top: 18px; }
-.page-1 section.songs > .list > li  h3{ font-size: 17px; color: #333; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 40px; }
-.page-1 section.songs > .list > li  p{ font-size: 12px; color: #888; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 40px; }
-.page-1 section.songs > .list >li{ position: relative; margin-left: 10px; border-bottom: .5px solid #E2E2E3; padding-bottom: 7px; padding-top: 8px;}
-.page-1 section.songs > .list .play-button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
-.page-1 section.songs > .list .icon-play{ color: #aaa; width: 24px; height: 24px; vertical-align: middle; }
+.page-1 section.songs > .list { margin-top: .5625rem; }
+.page-1 section.songs > .list > li  h3{ font-size: .53125rem; color: #333;  padding-right: 1.25rem; }
+.page-1 section.songs > .list > li  p{ font-size: .375rem; color: #888; padding-right: 1.25rem; }
+.page-1 section.songs > .list >li{ position: relative; margin-left: .3125rem; border-bottom: .015625rem solid #E2E2E3; padding-bottom: .21875rem; padding-top: .25rem;}
+.page-1 section.songs > .list .play-button{ position: absolute; right: .3125rem; top: 50%; transform: translateY(-50%); }
+.page-1 section.songs > .list .icon-play{ color: #aaa; width: .75rem; height: .75rem; vertical-align: middle; }
 .page-1 section.songs > .list .icon-sq{ color: #FE672E; }
 /* footer */
-.page-1 section.art{ padding-top: 43px; padding-bottom: 18px; background: transparent url(http://oxkl41ihc.bkt.clouddn.com/recommand_bg_2x.png) no-repeat center; text-align: center; background-size: cover; }
-.page-1 section.art > .logo > svg{ width: 230px; height: 44px; }
-.page-1 .link{ display: inline-block; font-size: 16px; color: #d33a31; border: 1px solid #d33a31; line-height: 38px; padding: 0 18px; border-radius: 36px; margin: 10px 0 5px; }
-.page-1 .copyright{ color: #888; font-size: 12px; transform: scale(.75); }
+.page-1 section.art{ padding-top: 1.34375rem; padding-bottom: .375rem; background: transparent url(http://oxkl41ihc.bkt.clouddn.com/recommand_bg_2x.png) no-repeat center; text-align: center; background-size: cover; }
+.page-1 section.art > .logo > svg{ width: 7.1875rem; height: 1.375rem; }
+.page-1 .link{ display: inline-block; font-size: .5rem; color: #d33a31; border: .03125rem solid #d33a31; line-height: 1.1875rem; padding: 0 .5625rem; border-radius: 1.125rem; margin: .3125rem 0 0.15625rem; }
+.page-1 .copyright{ color: #888; font-size: .375rem; transform: scale(.75); }
 
-.page-2 .hotBanner{ position: relative; display: flex; margin-top: -1px;  padding-left: 20px; flex-direction: column; padding-top: 15px; padding-bottom: 18px; }
+.page-2 .hotBanner{ position: relative; display: flex; margin-top: -.03125rem;  padding-left: 0.625rem; flex-direction: column; padding-top: 0.46875rem; padding-bottom: 0.55rem; }
 .page-2 .hotBanner::before{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url(http://oxkl41ihc.bkt.clouddn.com/hot_music_bg_2x.jpg) no-repeat center; background-size: cover; filter: brightness(.8);}
-.page-2 .hotBanner img{width: 142px; height: 67px; z-index: 2;}
-.page-2 .hotBanner p{ font-size: 13px; color: #ECDBD7; margin-top: 8px;}
-.page-2 .list-more{ line-height: 55px; font-size: 14px; text-align: center; color: #999; }
+.page-2 .hotBanner img{width: 4.4375rem; z-index: 2;}
+.page-2 .hotBanner p{ font-size: .40625rem; color: #ECDBD7; margin-top: .25rem;}
+.page-2 .list-more{ /*line-height: .5015625rem;*/ padding: .625rem 0; font-size: 0.4375rem; text-align: center; color: #999; }
 .page-2 #hot-song li:nth-child(1) .number{color: #df3436}
 .page-2 #hot-song li:nth-child(2) .number{color: #df3436}
 .page-2 #hot-song li:nth-child(3) .number{color: #df3436}
 
 .page-3{ background: #FBFCFD; }
-.page-3 .search{ padding:15px 10px; position: relative; }
-.page-3 .search input{ background: #EBECEC; width: 100%; border: none; border-radius: 30px; line-height: 30px; padding-left: 30px; outline: none; position: relative;}
+.page-3 .search{ padding:.46875rem .3125rem; position: relative; }
+.page-3 .search input{ background: #EBECEC; width: 100%; border: none; border-radius: 0.9375rem; line-height: 0.9375rem; padding-left: 0.9375rem; outline: none; position: relative;}
 .page-3 .search label{ position: relative;}
-.page-3 .search label .icon-search { position: absolute; top: 4px; left: 10px; z-index: 2; color: #C9C9CA;}
-.page-3 .search input::-webkit-input-placeholder{ color: #C9C9C9; font-size: 14px;}
-.page-3 .hot-search{ padding: 12px 10px 0 10px; color: #666;}
-.page-3 .hot-search > h4{ font-size: 12px; padding-bottom: 10px;}
+.page-3 .search label .icon-search { position: absolute; top: .125rem; left: .3125rem; z-index: 2; color: #C9C9CA;}
+.page-3 .search input::-webkit-input-placeholder{ color: #C9C9C9; font-size: 0.4375rem;}
+.page-3 .hot-search{ padding: .375rem .3125rem 0 .3125rem; color: #666;}
+.page-3 .hot-search > h4{ font-size: .375rem; padding-bottom: .3125rem;}
 .page-3 .hot-search .hot-block{ display: flex; flex-wrap: wrap;  }
-.page-3 .hot-search .hot-block li{ position: relative;  margin: 0 8px 8px 0; }
-.page-3 .hot-search .hot-block li a{ color: #333333; padding: 0 14px; font-size: 14px; line-height: 32px; position: relative; z-index: 6; display: inline-block;}
-.page-3 .hot-search .hot-block li::after{ content: ""; position: absolute;  top: 0; left: 0; width: 200%; height: 200%; transform:scale(.5);transform-origin: top left; border: 1px solid #E8E9EA; border-radius: 30px; }
+.page-3 .hot-search .hot-block li{ position: relative;  margin: 0 .25rem .25rem 0; }
+.page-3 .hot-search .hot-block li a{ color: #333333; padding: 0 0.4375rem; font-size: 0.4375rem; line-height: 1rem; position: relative; z-index: 6; display: inline-block;}
+.page-3 .hot-search .hot-block li::after{ content: ""; position: absolute;  top: 0; left: 0; width: 200%; height: 200%; transform:scale(.5);transform-origin: top left; border: .03125rem solid #E8E9EA; border-radius: 0.9375rem; }
 .page-3 .searchResult{ }
-.page-3 .searchResult li a{ display: flex; font-size: 15px; line-height: 45px;}
-.page-3 .searchResult li a .search-icon{ color: #B5B6B6; padding-left: 10px; height: 45px; display: flex; align-items: center; margin-right: 7px;}
-.page-3 .searchResult li a .search-info{  width: 40%; flex-grow: 1; position: relative;overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 15px; }
+.page-3 .searchResult li a{ display: flex; font-size: .46875rem; line-height: 1.4375rem;}
+.page-3 .searchResult li a .search-icon{ color: #B5B6B6; padding-left: .3125rem; display: flex; align-items: center; margin-right: .21875rem;}
+.page-3 .searchResult li a .search-info{  width: 40%; flex-grow: 1; position: relative; padding-right: 0.15625rem;}

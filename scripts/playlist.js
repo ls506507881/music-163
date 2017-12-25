@@ -10,8 +10,8 @@ AV.Query.doCloudQuery(cql).then(function (data) {
             <a href="./song.html?id=${result[i].id}">
                 <div class="number">${song.number}</div>
                 <div class="song-info">
-                    <h3> ${song.name}</h3>
-                    <p> ${song.singer} - ${song.album}</p>
+                    <h3 class="text-hidden"> ${song.name}</h3>
+                    <p class="text-hidden"> ${song.singer} - ${song.album}</p>
                 </div>
                 <div class="play-button">
                     <svg class="icon icon-play">

@@ -64,10 +64,10 @@ AV.Query.doCloudQuery(cql).then(function (data) {
         let li = `
         <li>
             <a href="./song.html?id=${results[i].id}">
-                <h3>${song.name}
+                <h3 class="text-hidden">${song.name}
                     <span>${song.reMark}</span>
                 </h3>
-                <p>
+                <p class="text-hidden">
                     <svg class="icon icon-sq">
                         <use xlink:href="#icon-sq"></use>
                     </svg>
@@ -125,7 +125,7 @@ $('input#search').on('input', function (e) {
                             <div class="search-icon">
                                 <svg class="icon icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
                             </div>
-                            <div class="search-info underline">${song.name} - ${song.singer}</div></a>
+                            <div class="search-info text-hidden underline">${song.name} - ${song.singer}</div></a>
                         </li>
                         `
                         $searchResult.append(li)
@@ -152,8 +152,8 @@ $('input#search').on('input', function (e) {
                     <a href="./song.html?id=${results[i].id}">
                         <div id="number" class="number">${song.number}</div>
                         <div class="song-info">
-                            <h3>${song.name}</h3>
-                            <p>${song.singer} - ${song.album}</p>
+                            <h3 class="text-hidden">${song.name}</h3>
+                            <p class="text-hidden">${song.singer} - ${song.album}</p>
                         </div>
                         <div class="play-button">
                             <svg class="icon icon-play">
