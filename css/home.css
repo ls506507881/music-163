@@ -6,10 +6,10 @@ body{ font-size: .46785rem; background: #FCFCFD;}
 /* 公共标题 */
 .section-title{
     border-left: 2px solid #d43c33;
-    font-size: 17px;
+    font-size: .51325rem;
     line-height: 1;
-    padding-left: 8px;
-    margin:20px 0 8px;
+    padding-left: .25rem;
+    margin:.625rem 0 .25rem;
     color: #333333;
 }
 /* topbar */
@@ -114,107 +114,27 @@ section.topbar>a::after{
     /* display: block;
     border-top: 1px solid transparent; */
  /*} */
-section.playlists > ol.songs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 13px;
-    margin-bottom: 36px;
-}
-section.playlists > ol.songs > li{
-    width: 32.8%;
-    margin: 8px 0;
-}
-section.playlists > ol.songs > li img{
-    width: 100%;
-    height: 3.28rem;
-}
-section.playlists > ol.songs > li p{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    padding: 2px 6px 0;
-    line-height: 1.2;
-}
+.page-1 section.playlists > ol.songs{ display: flex; flex-wrap: wrap;  justify-content: space-between; font-size: 13px; margin-bottom: 36px; } 
+.page-1 section.playlists > ol.songs > li{ width: 32.8%; margin: 8px 0; }
+.page-1 section.playlists > ol.songs > li img{ width: 100%; height: 3.28rem; }
+.page-1 section.playlists > ol.songs > li p{ display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; padding: 2px 6px 0; line-height: 1.2; }
 
 /* 最新音乐 */
-#songs-loading{
-    margin: 0 auto;
-    width: 45px;
-}
-#songs-loading > div{
-    background: #D43C33;
-}
+.page-1 #songs-loading{ margin: 0 auto; width: 45px; }
+.page-1 #songs-loading > div{ background: #D43C33; }
 
-section.songs > .list {
-    margin-top: 18px;
-}
-section.songs > .list > li  h3{
-    font-size: 17px;
-    color: #333;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    padding-right: 40px;
-}
-section.songs > .list > li  p{
-    font-size: 12px;
-    color: #888;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    white-space: nowrap;
-    padding-right: 40px;
-}
-section.songs > .list >li{
-    position: relative;
-    margin-left: 10px;
-    border-bottom: .5px solid #E2E2E3;
-    padding-bottom: 7px;
-    padding-top: 8px;
-}
-section.songs > .list .play-button{
-    position: absolute; 
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-section.songs > .list .icon-play{
-    color: #aaa;
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-}
-section.songs > .list .icon-sq{
-    color: #FE672E;
-}
+.page-1 section.songs > .list { margin-top: 18px; }
+.page-1 section.songs > .list > li  h3{ font-size: 17px; color: #333; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 40px; }
+.page-1 section.songs > .list > li  p{ font-size: 12px; color: #888; overflow: hidden; text-overflow:ellipsis; white-space: nowrap; padding-right: 40px; }
+.page-1 section.songs > .list >li{ position: relative; margin-left: 10px; border-bottom: .5px solid #E2E2E3; padding-bottom: 7px; padding-top: 8px;}
+.page-1 section.songs > .list .play-button{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+.page-1 section.songs > .list .icon-play{ color: #aaa; width: 24px; height: 24px; vertical-align: middle; }
+.page-1 section.songs > .list .icon-sq{ color: #FE672E; }
 /* footer */
-section.art{
-    padding-top: 43px;
-    padding-bottom: 18px;
-    background: transparent url(http://oxkl41ihc.bkt.clouddn.com/recommand_bg_2x.png) no-repeat center;
-    text-align: center;
-    background-size: cover;
-}
-section.art > .logo > svg{
-    width: 230px;
-    height: 44px;
-}
-.link{
-    display: inline-block;
-    font-size: 16px;
-    color: #d33a31;
-    border: 1px solid #d33a31;
-    line-height: 38px;
-    padding: 0 18px;
-    border-radius: 36px;
-    margin: 10px 0 5px;
-}
-.copyright{
-    color: #888;
-    font-size: 12px;    
-    transform: scale(.75);
-}
+.page-1 section.art{ padding-top: 43px; padding-bottom: 18px; background: transparent url(http://oxkl41ihc.bkt.clouddn.com/recommand_bg_2x.png) no-repeat center; text-align: center; background-size: cover; }
+.page-1 section.art > .logo > svg{ width: 230px; height: 44px; }
+.page-1 .link{ display: inline-block; font-size: 16px; color: #d33a31; border: 1px solid #d33a31; line-height: 38px; padding: 0 18px; border-radius: 36px; margin: 10px 0 5px; }
+.page-1 .copyright{ color: #888; font-size: 12px; transform: scale(.75); }
 
 .page-2 .hotBanner{ position: relative; display: flex; margin-top: -1px;  padding-left: 20px; flex-direction: column; padding-top: 15px; padding-bottom: 18px; }
 .page-2 .hotBanner::before{ content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url(http://oxkl41ihc.bkt.clouddn.com/hot_music_bg_2x.jpg) no-repeat center; background-size: cover; filter: brightness(.8);}

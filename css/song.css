@@ -90,11 +90,17 @@ section.disk > .circle.playing > img{
 section.disk > .circle.playing .icon-play{
     display: none;
 }
+section.disk > .circle .icon-pause{
+    display: none;
+}
 section.disk > .circle.playing.pause .icon-play{
     display: block;
 }
 section.disk > .circle.playing.pause .icon-pause{
     display: none;
+}
+section.disk > .circle.playing .icon-pause{
+    display: block;
 }
 section.disk > .circle.playing.pause::after,
 section.disk > .circle.playing.pause img{
